@@ -4,12 +4,14 @@ import { db } from "./src/config/db.js";
 import { favoritesTable } from "./src/db/schema.js";
 import bodyParser from "body-parser";
 import { and, eq } from "drizzle-orm";
+import cors from "cors"
 
 const app = express();
 const PORT = ENV.PORT || 5001;
 
 app.use(express.json()); //if we dont use this the object variables in api is gonna be undefined
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({ success: true });
