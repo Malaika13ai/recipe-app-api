@@ -1,7 +1,7 @@
 import express from "express";
-import { ENV } from "./config/env.js";
-import { db } from "./config/db.js";
-import { favoritesTable } from "./db/schema.js";
+import { ENV } from "./src/config/env.js";
+import { db } from "./src/config/db.js";
+import { favoritesTable } from "./src/db/schema.js";
 import bodyParser from "body-parser";
 import { and, eq } from "drizzle-orm";
 
